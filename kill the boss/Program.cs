@@ -40,6 +40,7 @@ float super = 0;
 string supername = "0- Super atack, ";
 float kills = 0;
 float case4 = 0;
+float bosshand = 0;
 
 while ( game == 1)
 {
@@ -183,6 +184,23 @@ while ( game == 1)
             pl = pl - ba;
             break;
        
+    }
+    while (bosshand == 1)
+    {
+        /*
+        ProcessStartInfo startinfo = new ProcessStartInfo();
+        startinfo.FileName = @"D:\\XX\\XX\\bin\\Debug\\XXX.exe";
+        startinfo.CreateNoWindow = true;
+        startinfo.UseShellExecute = true;
+        Process myProcess = Process.Start(startinfo);
+        myProcess.Start();
+        */
+        System.Diagnostics.Process pProcess = new System.Diagnostics.Process();
+        pProcess.StartInfo.FileName = "c:\\analyze.exe";
+        // pProcess.StartInfo.Arguments = inputPath + " " + outputPath;
+        pProcess.Start();
+        pProcess.WaitForExit();
+        pProcess.Close();
     }
     super = super + 1;
     Console.Clear();
