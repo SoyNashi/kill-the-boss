@@ -1,6 +1,32 @@
-﻿float pl = 100;
-float bl = 100;
+﻿float plr = 100;
+float blr = 100;
+float pl = plr;
+float bl = blr;
+/*
+float pacc = 1;
+float game = 1;
+*/
+/*
+while (game == 1)
+{
+    string com = "no hay comentario para esta accion";
+    string bcom = "no hay comentario para la accion del bos";
+    Random rnd = new Random();
+    float action = rnd.Next(1, 4);
 
+    float pacc1 = rnd.Next(1, 51);
+    float pacc2 = rnd.Next(1, 51);
+    float pacc3 = rnd.Next(0, 14);
+    float ba = rnd.Next(0, 70);
+
+    Console.WriteLine("Kill The Boss");
+    Console.WriteLine("=============");
+    Console.WriteLine("Player Life: " + pl);
+    Console.WriteLine("Boss Life: " + bl);
+    Console.WriteLine("=============");
+    Console.WriteLine("1- Normal atack, 2- Heal, 3- Open chest");
+}
+*/
 float pacc = 1;
 float game = 1;
 int pacc1min = 1;
@@ -13,6 +39,7 @@ int case0 = 50;
 float super = 0;
 string supername = "0- Super atack, ";
 float kills = 0;
+float case4 = 0;
 
 while ( game == 1)
 {
@@ -131,6 +158,12 @@ while ( game == 1)
                     break;
             }
             break;
+        case 4:
+            case4 = 1;
+            super = 0;
+            bl = bl - (pacc1 + 100);
+            com = ("Has atacado con el daño siguiente: " + (pacc1 + 100));
+            break;
     }
 
     switch (action)
@@ -157,7 +190,128 @@ while ( game == 1)
     Console.WriteLine(bcom);
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine("=============");
+    if (case4 == 1)
+    {
+        Console.WriteLine("(pacc1min, pacc1max)" + (pacc1min, pacc1max));
+        Console.WriteLine("(pacc2min, pacc2max)" + (pacc2min, pacc2max));
+        Console.WriteLine("(bamin, bamaz)" + (bamin, bamax));
+        if (bl <= 0)
+        {
+            if (pl <= 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Kill The Boss");
+                Console.WriteLine("=============");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("Player Life: " + pl);
+                Console.WriteLine("Boss Life: " + bl);
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("=============");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Has muerto");
+                game = 0;
+                break;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Kill The Boss");
+                Console.WriteLine("=============");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("Player Life: " + pl);
+                Console.WriteLine("Boss Life: " + bl);
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("=============");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("El Boss ha sido derrotado");
+                pacc1min = pacc1min + 10;
+                pacc1max = pacc1max + 10;
+                pacc2min = pacc2min + 10;
+                pacc2max = pacc2max + 10;
+                bamin = bamin + 10;
+                bamax = bamax + 10;
+                case0 = case0 + 10;
+                kills++;
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                Console.WriteLine("=============");
+                Console.WriteLine("El Boss Ha Vuelto");
+                Console.WriteLine("+10 mas fuerte!!");
+                Console.WriteLine("Haver si sobrevives");
+                Console.WriteLine("=============");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Vida del hugador restaurada");
+                pl = 100;
+                Console.WriteLine("Vida del Boss Restaurada");
+                bl = 100;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("=============");
+            }
 
+
+        }
+
+    }
+    else
+    {
+        if (bl <= 0)
+        {
+            if (pl <= 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Kill The Boss");
+                Console.WriteLine("=============");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("Player Life: " + pl);
+                Console.WriteLine("Boss Life: " + bl);
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("=============");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Has muerto");
+                game = 0;
+                break;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Kill The Boss");
+                Console.WriteLine("=============");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("Player Life: " + pl);
+                Console.WriteLine("Boss Life: " + bl);
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("=============");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("El Boss ha sido derrotado");
+                pacc1min = pacc1min + 10;
+                pacc1max = pacc1max + 10;
+                pacc2min = pacc2min + 10;
+                pacc2max = pacc2max + 10;
+                bamin = bamin + 10;
+                bamax = bamax + 10;
+                case0 = case0 + 10;
+                plr = plr + 20;
+                blr = blr + 20;
+                kills++;
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                Console.WriteLine("=============");
+                Console.WriteLine("El Boss Ha Vuelto");
+                Console.WriteLine("+10 mas fuerte!!");
+                Console.WriteLine("Haver si sobrevives");
+                Console.WriteLine("=============");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Vida del hugador restaurada");
+                pl = 100;
+                Console.WriteLine("Vida del Boss Restaurada");
+                bl = 100;
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("=============");
+            }
+
+
+        }
+
+
+    }
     if (bl <= 0)
     {
         if (pl <= 0)
