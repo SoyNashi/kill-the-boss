@@ -1,6 +1,30 @@
 ﻿float pl = 100;
 float bl = 100;
+/*
+float pacc = 1;
+float game = 1;
+*/
+/*
+while (game == 1)
+{
+    string com = "no hay comentario para esta accion";
+    string bcom = "no hay comentario para la accion del bos";
+    Random rnd = new Random();
+    float action = rnd.Next(1, 4);
 
+    float pacc1 = rnd.Next(1, 51);
+    float pacc2 = rnd.Next(1, 51);
+    float pacc3 = rnd.Next(0, 14);
+    float ba = rnd.Next(0, 70);
+
+    Console.WriteLine("Kill The Boss");
+    Console.WriteLine("=============");
+    Console.WriteLine("Player Life: " + pl);
+    Console.WriteLine("Boss Life: " + bl);
+    Console.WriteLine("=============");
+    Console.WriteLine("1- Normal atack, 2- Heal, 3- Open chest");
+}
+*/
 float pacc = 1;
 float game = 1;
 int pacc1min = 1;
