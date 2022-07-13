@@ -1,5 +1,6 @@
 ﻿float pl = 100;
 float bl = 100;
+
 float pacc = 1;
 float game = 1;
 int pacc1min = 1;
@@ -28,7 +29,7 @@ while ( game == 1)
         supername = "0- Super atack, ";
     }
     Console.ForegroundColor = ConsoleColor.Yellow;
-    Console.WriteLine("Kill The Boss");
+        Console.WriteLine("Kill The Boss");
     Console.WriteLine("=============");
     Console.ForegroundColor = ConsoleColor.Blue;
     Console.WriteLine("Player Life: " + pl);
@@ -166,7 +167,7 @@ while ( game == 1)
             Console.WriteLine("Player Life: " + pl);
             Console.WriteLine("Boss Life: " + bl);
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("=============");
+        Console.WriteLine("=============");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Has muerto");
             game = 0;
@@ -175,15 +176,15 @@ while ( game == 1)
         else
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Kill The Boss");
-            Console.WriteLine("=============");
+        Console.WriteLine("Kill The Boss");
+        Console.WriteLine("=============");
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Player Life: " + pl);
-            Console.WriteLine("Boss Life: " + bl);
+        Console.WriteLine("Player Life: " + pl);
+        Console.WriteLine("Boss Life: " + bl);
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("=============");
+        Console.WriteLine("=============");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("El Boss ha sido derrotado");
+        Console.WriteLine("El Boss ha sido derrotado");
             pacc1min = pacc1min + 10;
             pacc1max = pacc1max + 10;
             pacc2min = pacc2min + 10;
@@ -205,7 +206,8 @@ while ( game == 1)
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("=============");
         }
-        
+
+        game = 0;
     }
     if (pl <= 0)
     {
