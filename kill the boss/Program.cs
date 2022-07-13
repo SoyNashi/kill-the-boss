@@ -1,5 +1,6 @@
 ﻿float pl = 100;
 float bl = 100;
+
 float pacc = 1;
 float game = 1;
 int pacc1min = 1;
@@ -11,6 +12,7 @@ int bamax = 60;
 int case0 = 50;
 float super = 0;
 string supername = "0- Super atack, ";
+float kills = 0;
 
 while ( game == 1)
 {
@@ -28,13 +30,14 @@ while ( game == 1)
         supername = "0- Super atack, ";
     }
     Console.ForegroundColor = ConsoleColor.Yellow;
-    Console.WriteLine("Kill The Boss");
+        Console.WriteLine("Kill The Boss");
     Console.WriteLine("=============");
     Console.ForegroundColor = ConsoleColor.Blue;
     Console.WriteLine("Player Life: " + pl);
     Console.WriteLine("Boss Life: " + bl);
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine("=============");
+    Console.WriteLine("Bosses derrotados: " + kills);
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine(supername + "1- Normal atack, 2- Heal, 3- Open chest");
     float paccv = 1;
@@ -166,7 +169,7 @@ while ( game == 1)
             Console.WriteLine("Player Life: " + pl);
             Console.WriteLine("Boss Life: " + bl);
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("=============");
+        Console.WriteLine("=============");
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Has muerto");
             game = 0;
@@ -175,15 +178,15 @@ while ( game == 1)
         else
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Kill The Boss");
-            Console.WriteLine("=============");
+        Console.WriteLine("Kill The Boss");
+        Console.WriteLine("=============");
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Player Life: " + pl);
-            Console.WriteLine("Boss Life: " + bl);
+        Console.WriteLine("Player Life: " + pl);
+        Console.WriteLine("Boss Life: " + bl);
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("=============");
+        Console.WriteLine("=============");
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("El Boss ha sido derrotado");
+        Console.WriteLine("El Boss ha sido derrotado");
             pacc1min = pacc1min + 10;
             pacc1max = pacc1max + 10;
             pacc2min = pacc2min + 10;
@@ -191,6 +194,7 @@ while ( game == 1)
             bamin = bamin + 10;
             bamax = bamax + 10;
             case0 = case0 + 10;
+            kills++;
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("=============");
             Console.WriteLine("El Boss Ha Vuelto");
@@ -205,6 +209,7 @@ while ( game == 1)
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("=============");
         }
+
         
     }
     if (pl <= 0)
