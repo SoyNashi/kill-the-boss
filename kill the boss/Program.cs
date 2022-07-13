@@ -1,7 +1,7 @@
-﻿float plr = 100;
-float blr = 100;
-float pl = plr;
-float bl = blr;
+﻿float plr = 0;
+float blr = 0;
+float pl = 100;
+float bl = 100;
 /*
 float pacc = 1;
 float game = 1;
@@ -231,6 +231,8 @@ while ( game == 1)
                 bamin = bamin + 10;
                 bamax = bamax + 10;
                 case0 = case0 + 10;
+                plr = plr + 20;
+                blr = blr + 20;
                 kills++;
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("=============");
@@ -241,8 +243,10 @@ while ( game == 1)
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Vida del hugador restaurada");
                 pl = 100;
-                Console.WriteLine("Vida del Boss Restaurada");
                 bl = 100;
+                pl = pl + plr;
+                Console.WriteLine("Vida del Boss Restaurada");
+                bl = bl + blr;
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("=============");
             }
@@ -301,8 +305,10 @@ while ( game == 1)
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Vida del hugador restaurada");
                 pl = 100;
-                Console.WriteLine("Vida del Boss Restaurada");
                 bl = 100;
+                pl = pl + plr;
+                Console.WriteLine("Vida del Boss Restaurada");
+                bl = bl + blr;
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("=============");
             }
@@ -348,6 +354,8 @@ while ( game == 1)
             bamin = bamin + 10;
             bamax = bamax + 10;
             case0 = case0 + 10;
+            plr = plr + 20;
+            blr = blr + 20;
             kills++;
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("=============");
@@ -358,8 +366,10 @@ while ( game == 1)
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Vida del hugador restaurada");
             pl = 100;
-            Console.WriteLine("Vida del Boss Restaurada");
             bl = 100;
+            pl = pl + plr;
+            Console.WriteLine("Vida del Boss Restaurada");
+            bl = bl + blr;
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("=============");
         }
