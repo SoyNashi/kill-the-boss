@@ -73,7 +73,9 @@ while ( game == 1)
     {
         try
         {
+#pragma warning disable CS8604 // Posible argumento de referencia nulo
             pacc = float.Parse(Console.ReadLine());
+#pragma warning restore CS8604 // Posible argumento de referencia nulo
             paccv = 0;
         }
         catch
@@ -196,7 +198,7 @@ while ( game == 1)
         myProcess.Start();
         */
         System.Diagnostics.Process pProcess = new System.Diagnostics.Process();
-        pProcess.StartInfo.FileName = "c:\\analyze.exe";
+        pProcess.StartInfo.FileName = "calc.exe";
         // pProcess.StartInfo.Arguments = inputPath + " " + outputPath;
         pProcess.Start();
         pProcess.WaitForExit();
