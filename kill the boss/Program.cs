@@ -39,6 +39,7 @@ int case0 = 50;
 float super = 0;
 string supername = "0- Super atack, ";
 float kills = 0;
+float killst = 0;
 float case4 = 0;
 float bosshand = 0;
 Random rnd = new Random();
@@ -68,6 +69,7 @@ while ( game == 1)
     Console.ForegroundColor = ConsoleColor.Yellow;
     Console.WriteLine("=============");
     Console.WriteLine("Bosses derrotados: " + kills);
+    // Console.WriteLine("Bosses derrotados temporales: " + killst);
     Console.ForegroundColor = ConsoleColor.White;
     Console.WriteLine(supername + "1- Normal atack, 2- Heal, 3- Open chest");
     float paccv = 1;
@@ -85,7 +87,7 @@ while ( game == 1)
             paccv = 1;
         }
     }
-    
+
     switch (pacc)
     {
         case 0:
@@ -163,14 +165,15 @@ while ( game == 1)
                     break;
             }
             break;
-        /*
-    case 4:
-        case4 = 1;
-        super = 0;
-        bl = bl - (pacc1 + 100);
-        com = ("Has atacado con el daño siguiente: " + (pacc1 + 100));
-        break;
-        */
+/*
+        case 4:
+            case4 = 1;
+            super = 0;
+            bl = bl - (pacc1 * 100);
+            com = ("Has atacado con el daño siguiente: " + (pacc1 * 100));
+            break;
+*/
+/*
         default:
             if (super >= 4)
             {
@@ -185,6 +188,7 @@ while ( game == 1)
                 com = ("Has atacado con el daño siguiente: " + pacc1);
             }
             break;
+*/
     }
 
     switch (action)
@@ -203,12 +207,12 @@ while ( game == 1)
             break;
        
     }
-    if (kills == bossspawn)
+    if (killst == bossspawn)
     {
-        bosshand = 1;
-    }
-    while (bosshand == 1)
-    {
+    //     bosshand = 1;
+    // }
+    // while (bosshand == 1)
+    // {
         /*
         ProcessStartInfo startinfo = new ProcessStartInfo();
         startinfo.FileName = @"D:\\XX\\XX\\bin\\Debug\\XXX.exe";
@@ -218,14 +222,15 @@ while ( game == 1)
         myProcess.Start();
         */
         System.Diagnostics.Process pProcess = new System.Diagnostics.Process();
-        pProcess.StartInfo.FileName = "calc.exe";
+        // C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0
+        pProcess.StartInfo.FileName = "Otherboss.bat";
         // pProcess.StartInfo.Arguments = inputPath + " " + outputPath;
         pProcess.Start();
         pProcess.WaitForExit();
         pProcess.Close();
-
+        killst = 0;
         bossspawn = rnd.Next(5, 20);
-        bosshand = 0;
+     //   bosshand = 0;
     }
     super = super + 1;
     Console.Clear();
@@ -279,6 +284,7 @@ while ( game == 1)
                 plr = plr + 20;
                 blr = blr + 20;
                 kills++;
+                killst++;
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("=============");
                 Console.WriteLine("El Boss Ha Vuelto");
@@ -341,6 +347,7 @@ while ( game == 1)
                 plr = plr + 20;
                 blr = blr + 20;
                 kills++;
+                killst++;
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("=============");
                 Console.WriteLine("El Boss Ha Vuelto");
@@ -402,6 +409,7 @@ while ( game == 1)
             plr = plr + 20;
             blr = blr + 20;
             kills++;
+            killst++;
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("=============");
             Console.WriteLine("El Boss Ha Vuelto");
