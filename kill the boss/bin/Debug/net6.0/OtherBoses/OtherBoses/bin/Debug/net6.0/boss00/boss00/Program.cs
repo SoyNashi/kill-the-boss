@@ -349,5 +349,16 @@ while (game == 1)
     {
 
     }
-
+    if (game == 2)
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("El Boss ha sido derrotado");
+        game = 0;
+    }
+    if (game == 3)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Has muerto");
+        game = 0;
+    }
 }
