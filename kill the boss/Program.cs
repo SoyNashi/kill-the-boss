@@ -41,7 +41,9 @@ string supername = "0- Super atack, ";
 float kills = 0;
 float killst = 0;
 float case4 = 0;
+#pragma warning disable CS0219 // La variable está asignada pero nunca se usa su valor
 float bosshand = 0;
+#pragma warning restore CS0219 // La variable está asignada pero nunca se usa su valor
 Random rnd = new Random();
 float bossspawn = rnd.Next(5, 20);
 // float bossspawn = 1;
