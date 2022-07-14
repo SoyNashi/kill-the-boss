@@ -41,13 +41,15 @@ string supername = "0- Super atack, ";
 float kills = 0;
 float case4 = 0;
 float bosshand = 0;
+Random rnd = new Random();
+float bossspawn = rnd.Next(5, 20);
+// float bossspawn = 1;
 
 while ( game == 1)
 {
     supername = "";
     string com = "no hay comentario para esta accion";
     string bcom = "no hay comentario para la accion del boss";
-    Random rnd = new Random();
     float action = rnd.Next(1, 4);
     float pacc1 = rnd.Next(pacc1min, pacc1max);
     float pacc2 = rnd.Next(pacc2min, pacc2max);
@@ -73,7 +75,9 @@ while ( game == 1)
     {
         try
         {
+#pragma warning disable CS8604 // Posible argumento de referencia nulo
             pacc = float.Parse(Console.ReadLine());
+#pragma warning restore CS8604 // Posible argumento de referencia nulo
             paccv = 0;
         }
         catch
@@ -159,14 +163,28 @@ while ( game == 1)
                     break;
             }
             break;
-            /*
-        case 4:
-            case4 = 1;
-            super = 0;
-            bl = bl - (pacc1 + 100);
-            com = ("Has atacado con el daño siguiente: " + (pacc1 + 100));
+        /*
+    case 4:
+        case4 = 1;
+        super = 0;
+        bl = bl - (pacc1 + 100);
+        com = ("Has atacado con el daño siguiente: " + (pacc1 + 100));
+        break;
+        */
+        default:
+            if (super >= 4)
+            {
+                super = 0;
+                bl = bl - (pacc1 + case0);
+
+                com = ("Has atacado con el daño siguiente: " + (pacc1 + case0));
+            }
+            else
+            {
+                bl = bl - pacc1;
+                com = ("Has atacado con el daño siguiente: " + pacc1);
+            }
             break;
-            */
     }
 
     switch (action)
@@ -185,6 +203,10 @@ while ( game == 1)
             break;
        
     }
+    if (kills == bossspawn)
+    {
+        bosshand = 1;
+    }
     while (bosshand == 1)
     {
         /*
@@ -196,11 +218,14 @@ while ( game == 1)
         myProcess.Start();
         */
         System.Diagnostics.Process pProcess = new System.Diagnostics.Process();
-        pProcess.StartInfo.FileName = "c:\\analyze.exe";
+        pProcess.StartInfo.FileName = "calc.exe";
         // pProcess.StartInfo.Arguments = inputPath + " " + outputPath;
         pProcess.Start();
         pProcess.WaitForExit();
         pProcess.Close();
+
+        bossspawn = rnd.Next(5, 20);
+        bosshand = 0;
     }
     super = super + 1;
     Console.Clear();
