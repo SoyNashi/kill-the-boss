@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mrnil\\source\\repos\\kill the boss\\kill the boss\\OtherBoses\\OtherBoses\\OtherBoses.csproj",
+      "projectUniqueName": "C:\\Users\\mrnil\\source\\repos\\kill the boss\\kill the boss\\bin\\Debug\\net6.0\\OtherBoses\\OtherBoses\\OtherBoses.csproj",
       "projectName": "OtherBoses",
-      "projectPath": "C:\\Users\\mrnil\\source\\repos\\kill the boss\\kill the boss\\OtherBoses\\OtherBoses\\OtherBoses.csproj",
+      "projectPath": "C:\\Users\\mrnil\\source\\repos\\kill the boss\\kill the boss\\bin\\Debug\\net6.0\\OtherBoses\\OtherBoses\\OtherBoses.csproj",
       "packagesPath": "C:\\Users\\mrnil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mrnil\\source\\repos\\kill the boss\\kill the boss\\OtherBoses\\OtherBoses\\obj\\",
+      "outputPath": "C:\\Users\\mrnil\\source\\repos\\kill the boss\\kill the boss\\bin\\Debug\\net6.0\\OtherBoses\\OtherBoses\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mrnil\\AppData\\Roaming\\NuGet\\NuGet.Config",
