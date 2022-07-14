@@ -167,14 +167,14 @@ while ( game == 1)
                     break;
             }
             break;
-/*
+
         case 4:
             case4 = 1;
             super = 0;
             bl = bl - (pacc1 * 100);
             com = ("Has atacado con el daño siguiente: " + (pacc1 * 100));
             break;
-*/
+
 /*
         default:
             if (super >= 4)

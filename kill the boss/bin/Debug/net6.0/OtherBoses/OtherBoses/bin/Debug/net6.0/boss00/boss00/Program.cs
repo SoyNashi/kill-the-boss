@@ -167,14 +167,14 @@ while (game == 1)
                     break;
             }
             break;
-            /*
+            
                     case 4:
                         case4 = 1;
                         super = 0;
                         bl = bl - (pacc1 * 100);
                         com = ("Has atacado con el daño siguiente: " + (pacc1 * 100));
                         break;
-            */
+            
             /*
                     default:
                         if (super >= 4)
@@ -349,5 +349,16 @@ while (game == 1)
     {
 
     }
-
+    if (game == 2)
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("El Boss ha sido derrotado");
+        game = 0;
+    }
+    if (game == 3)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Has muerto");
+        game = 0;
+    }
 }
