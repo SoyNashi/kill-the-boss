@@ -47,6 +47,9 @@ float bosshand = 0;
 Random rnd = new Random();
 float bossspawn = rnd.Next(5, 20);
 // float bossspawn = 1;
+float xp = 100;
+float xpgain = 100;
+float xpshop = 1;
 
 while ( game == 1)
 {
@@ -57,6 +60,7 @@ while ( game == 1)
     float pacc1 = rnd.Next(pacc1min, pacc1max);
     float pacc2 = rnd.Next(pacc2min, pacc2max);
     float pacc3 = rnd.Next(0, 12);
+    xpgain = rnd.Next(100, 300);
     float ba = rnd.Next(bamin, bamax);
     if (super >= 4)
     {
@@ -73,7 +77,7 @@ while ( game == 1)
     Console.WriteLine("Bosses derrotados: " + kills);
     // Console.WriteLine("Bosses derrotados temporales: " + killst);
     Console.ForegroundColor = ConsoleColor.White;
-    Console.WriteLine(supername + "1- Normal atack, 2- Heal, 3- Open chest");
+    Console.WriteLine(supername + "1- Normal atack, 2- Heal, 3- Open chest, 5- Mejoras");
     float paccv = 1;
     while (paccv == 1)
     {
@@ -87,6 +91,106 @@ while ( game == 1)
         catch
         {
             paccv = 1;
+        }
+    }
+    if (pacc == 5)
+    {
+        xpshop = 1;
+        while (xpshop == 1)
+        {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Kill The Boss - Upgrades Shop");
+            Console.WriteLine("=============");
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("XP: " + xp);
+            // Console.WriteLine("Boss Life: " + bl);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("=============");
+            // Console.WriteLine("Bosses derrotados: " + kills);
+            // Console.WriteLine("Bosses derrotados temporales: " + killst);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("1- Mejorar ataque (300xp), 2- Mejorar curaciom (300xp), 3- Mejorar salud (500xp), 4- salir");
+            float xpsh = 3;
+            float paccvaxp = 1;
+            while (paccvaxp == 1)
+            {
+                try
+                {
+#pragma warning disable CS8604 // Posible argumento de referencia nulo
+                    xpsh = float.Parse(Console.ReadLine());
+#pragma warning restore CS8604 // Posible argumento de referencia nulo
+                    paccvaxp = 0;
+                }
+                catch
+                {
+                    paccvaxp = 1;
+                }
+            }
+            switch (xpsh)
+            {
+                case 1:
+                    if (xp >= 300)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Ataque mejorada por 300XP a cambio de +10 en la media.");
+                        pacc1min = pacc1min + 10;
+                        pacc1max = pacc1max + 10;
+                        xp = xp - 300;
+                    }
+                    break;
+                case 3:
+                    if (xp >= 500)
+                    {
+                        xp = xp - 500;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Vida mejorada por 500XP a cambio de +20 de vida.");
+                        plr = plr + 20;
+                        pl = pl + plr;
+                    }
+                    break;
+                case 2:
+                    if (xp >= 300)
+                    {
+                        xp = xp - 300;
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Curacion mejorada por 300XP a cambio de +10 en la media.");
+                        pacc2min = pacc2min + 10;
+                        pacc2max = pacc2max + 10;
+                    }
+                    break;
+                case 4:
+                    xpshop = 0;
+                    Console.Clear();
+                    break;
+            }
+        }
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("Kill The Boss");
+        Console.WriteLine("=============");
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.WriteLine("Player Life: " + pl);
+        Console.WriteLine("Boss Life: " + bl);
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("=============");
+        Console.WriteLine("Bosses derrotados: " + kills);
+        // Console.WriteLine("Bosses derrotados temporales: " + killst);
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine(supername + "1- Normal atack, 2- Heal, 3- Open chest");
+        float paccva = 1;
+        while (paccva == 1)
+        {
+            try
+            {
+#pragma warning disable CS8604 // Posible argumento de referencia nulo
+                pacc = float.Parse(Console.ReadLine());
+#pragma warning restore CS8604 // Posible argumento de referencia nulo
+                paccva = 0;
+            }
+            catch
+            {
+                paccva = 1;
+            }
         }
     }
 
@@ -167,30 +271,31 @@ while ( game == 1)
                     break;
             }
             break;
-/*
-        case 4:
-            case4 = 1;
-            super = 0;
-            bl = bl - (pacc1 * 100);
-            com = ("Has atacado con el daño siguiente: " + (pacc1 * 100));
-            break;
-*/
-/*
-        default:
-            if (super >= 4)
-            {
-                super = 0;
-                bl = bl - (pacc1 + case0);
+        /*
+                case 4:
+                    case4 = 1;
+                    super = 0;
+                    bl = bl - (pacc1 * 100);
+                    com = ("Has atacado con el daño siguiente: " + (pacc1 * 100));
+                    break;
+        */
+        /*
+                default:
+                    if (super >= 4)
+                    {
+                        super = 0;
+                        bl = bl - (pacc1 + case0);
 
-                com = ("Has atacado con el daño siguiente: " + (pacc1 + case0));
-            }
-            else
-            {
-                bl = bl - pacc1;
-                com = ("Has atacado con el daño siguiente: " + pacc1);
-            }
-            break;
-*/
+                        com = ("Has atacado con el daño siguiente: " + (pacc1 + case0));
+                    }
+                    else
+                    {
+                        bl = bl - pacc1;
+                        com = ("Has atacado con el daño siguiente: " + pacc1);
+                    }
+                    break;
+        */
+
     }
 
     switch (action)
@@ -287,6 +392,7 @@ while ( game == 1)
                 blr = blr + 20;
                 kills++;
                 killst++;
+                xp = xp + xpgain;
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("=============");
                 Console.WriteLine("El Boss Ha Vuelto");
@@ -349,7 +455,8 @@ while ( game == 1)
                 plr = plr + 20;
                 blr = blr + 20;
                 kills++;
-                killst++;
+                killst++; 
+                xp = xp + xpgain;
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("=============");
                 Console.WriteLine("El Boss Ha Vuelto");
@@ -412,6 +519,7 @@ while ( game == 1)
             blr = blr + 20;
             kills++;
             killst++;
+            xp = xp + xpgain;
             Console.ForegroundColor = ConsoleColor.DarkCyan;
             Console.WriteLine("=============");
             Console.WriteLine("El Boss Ha Vuelto");
