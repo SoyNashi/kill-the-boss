@@ -11,9 +11,9 @@
 *.sln.docstates
 
 # Creator
-.sln
-.cs
-.csproj
+*.sln
+*.cs
+*.csproj
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
