@@ -60,7 +60,7 @@ while ( game == 1)
     float pacc1 = rnd.Next(pacc1min, pacc1max);
     float pacc2 = rnd.Next(pacc2min, pacc2max);
     float pacc3 = rnd.Next(0, 12);
-    xpgain = rnd.Next(100, 300);
+    xpgain = rnd.Next(50, 125);
     float ba = rnd.Next(bamin, bamax);
     if (super >= 4)
     {
