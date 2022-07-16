@@ -1,0 +1,15 @@
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\bin\Debug\net6.0\boss01.exe
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\bin\Debug\net6.0\boss01.deps.json
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\bin\Debug\net6.0\boss01.runtimeconfig.json
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\bin\Debug\net6.0\boss01.dll
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\bin\Debug\net6.0\boss01.pdb
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\obj\Debug\net6.0\boss01.csproj.AssemblyReference.cache
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\obj\Debug\net6.0\boss01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\obj\Debug\net6.0\boss01.AssemblyInfoInputs.cache
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\obj\Debug\net6.0\boss01.AssemblyInfo.cs
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\obj\Debug\net6.0\boss01.csproj.CoreCompileInputs.cache
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\obj\Debug\net6.0\boss01.dll
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\obj\Debug\net6.0\refint\boss01.dll
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\obj\Debug\net6.0\boss01.pdb
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\obj\Debug\net6.0\boss01.genruntimeconfig.cache
+C:\Users\mrnil\source\repos\kill the boss\kill the boss\bin\Debug\net6.0\OtherBoses\OtherBoses\bin\Debug\net6.0\boss01\boss01\obj\Debug\net6.0\ref\boss01.dll
