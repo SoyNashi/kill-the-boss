@@ -1,4 +1,4 @@
-## ![Kill The Boss](https://app.soynashi.tk/ktm/logon.png)
+## ![Kill The Boss](https://app.soynashi.tk/ktm/logon.png) Kill The Bos
  
 ####  ¡Derrota el boss, pero no es tan fácil! El boss revive y cada vez que vuelve a la vida todos los stats de daño y de curación y de vida suman 20 puntos. En cuanto más bosses derrotes pueden salirte de otros y tener que derrotarlos sin que afecten a la vida ni jugabilidad del primero.
 
