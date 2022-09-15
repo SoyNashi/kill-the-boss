@@ -59,3 +59,4 @@ https://soynashi.tk/info/nft/index.html
 tengo como hobby hacer música, no soy muy bueno pero le voy pillando práctica. Te invito a mirar mi canal de youtube o mi cuenta de opensea para que puedas escuchar todas mis canciones y remixes.
 
 https://soynashi.tk/info/music/index.html
+
