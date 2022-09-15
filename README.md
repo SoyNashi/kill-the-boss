@@ -1,6 +1,5 @@
-![](https://app.soynashi.tk/ktm/logon.png)
-##  Kill The Boss
-
+## ![Kill The Boss](https://app.soynashi.tk/ktm/logon.png)
+ 
 ####  ¡Derrota el boss, pero no es tan fácil! El boss revive y cada vez que vuelve a la vida todos los stats de daño y de curación y de vida suman 20 puntos. En cuanto más bosses derrotes pueden salirte de otros y tener que derrotarlos sin que afecten a la vida ni jugabilidad del primero.
 
 ####  Piensa bien, atacas, curas o usas un cofre sorpresa, en el caso de que ataques ten en cuenta que el enemigo puede curarse igual o más e incluso puede lanzar un ataque que haga más daño que el tuyo y acabe con tu vida por debajo del cero. Si decides curarte, el enemigo podrá atacarte por un nivel igual o superior a lo que te curas, pero también puede curarse él y curarse más que tú, haciendo que tu vida este por debajo de la suya. Si Eliges el cofre sorpresa, puede que te beneficie o que no lo haga y que beneficie al enemigo, sin duda una herramienta muy buena para probar tu suerte.
